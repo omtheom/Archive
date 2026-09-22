@@ -22,8 +22,7 @@ Three files, one page:
 
 Every image slot is a marked placeholder so nothing breaks before you add real photos. Search for `REPLACE_WITH_` in `custom-block.html` and `styles.css`:
 
-**Logo**
-- `REPLACE_WITH_LOGO_URL` (in `custom-block.html`) — same Mapel Firm logo used on mapelfirm.com. Upload it to GHL Media and paste the URL.
+**Logo** — already wired in (the Mapel Firm logo, pulled from your GHL media library). No action needed unless you want to swap it for a different file.
 
 **Photos** (all in `styles.css`, as `background-image: url('REPLACE_WITH_..._IMAGE_URL')`):
 - `REPLACE_WITH_HERO_IMAGE_URL` — full-bleed hero background (a family photo album / hands holding old photographs works well).
