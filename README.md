@@ -24,8 +24,9 @@ Every image slot is a marked placeholder so nothing breaks before you add real p
 
 **Logo** — already wired in (the Mapel Firm logo, pulled from your GHL media library). No action needed unless you want to swap it for a different file.
 
+**Hero image** — already wired in (full-bleed hero background). No action needed unless you want to swap it.
+
 **Photos** (all in `styles.css`, as `background-image: url('REPLACE_WITH_..._IMAGE_URL')`):
-- `REPLACE_WITH_HERO_IMAGE_URL` — full-bleed hero background (a family photo album / hands holding old photographs works well).
 - `REPLACE_WITH_FAMILY_PHOTOS_IMAGE_URL`
 - `REPLACE_WITH_LETTERS_DOCUMENTS_IMAGE_URL`
 - `REPLACE_WITH_BOOKS_MANUSCRIPTS_IMAGE_URL`
