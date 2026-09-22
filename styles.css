@@ -811,111 +811,16 @@ h2.title em { font-style: italic; font-weight: 300; }
 .form-header { text-align: center; margin-bottom: clamp(2rem, 4vw, 3rem); }
 .form-header .rule { margin: 0 auto 1.75rem; }
 
-.field-group { margin-bottom: clamp(1.75rem, 3vw, 2.25rem); }
+.ghl-form-embed { width: 100%; }
 
-.field-group-label {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.field { margin-bottom: 1.5rem; }
-
-.field label {
-  display: block;
-  font-size: 0.78rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.6rem;
-}
-
-.field input[type="text"],
-.field input[type="tel"],
-.field input[type="email"],
-.field textarea {
+.ghl-form-embed iframe {
   width: 100%;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.05rem;
-  color: var(--ink);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  padding: 0.85rem 1rem;
-  outline: none;
-  transition: border-color 0.3s;
+  min-height: 1326px;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  display: block;
 }
-
-.field input::placeholder,
-.field textarea::placeholder { color: var(--muted); opacity: 0.65; }
-
-.field input:focus,
-.field textarea:focus { border-color: var(--ink); }
-
-.field textarea { min-height: 130px; resize: vertical; }
-
-.choice-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-}
-
-.choice-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  padding: 0.65rem 1.1rem;
-  font-size: 0.92rem;
-  color: var(--ink-soft);
-  cursor: pointer;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-  user-select: none;
-}
-
-.choice-pill input {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  pointer-events: none;
-}
-
-.choice-pill:has(input:checked),
-.choice-pill.is-checked {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
-}
-
-.choice-pill:hover { border-color: var(--ink); }
-
-.form-submit-row { margin-top: 2.25rem; text-align: center; }
-
-.form-note {
-  margin-top: 1.25rem;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: var(--muted);
-  text-align: center;
-}
-
-.form-status {
-  margin-top: 1.25rem;
-  text-align: center;
-  font-size: 0.92rem;
-  color: var(--accent);
-  display: none;
-}
-
-.form-status.is-visible { display: block; }
 
 /* ── FAQ ── */
 .faq { background: var(--paper-soft); }
@@ -1075,13 +980,10 @@ footer {
 
   .product-hero,
   .process-grid,
-  .pricing-grid,
-  .form-row {
+  .pricing-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-
-  .form-row { gap: 1.5rem; }
 
   .product-visual,
   .process-visual { aspect-ratio: 16/11; max-height: 480px; }
@@ -1119,8 +1021,7 @@ footer {
   .pricing-card { padding: 1.75rem; }
 
   .form-shell { padding: 1.75rem 1.25rem; }
-  .choice-grid { gap: 0.55rem; }
-  .choice-pill { font-size: 0.88rem; padding: 0.6rem 0.9rem; }
+  .ghl-form-embed iframe { min-height: 1500px; }
 
   .faq-item summary { padding: 1.25rem 1.8rem 1.25rem 0; }
   .faq-item .faq-answer { padding: 0 1.8rem 1.5rem 0; }

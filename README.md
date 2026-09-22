@@ -40,17 +40,9 @@ Until you add real photos, every slot falls back to a warm stone-colored panel (
 
 ## The form — how it captures responses
 
-The page includes the full form from your copy (Name, Phone/WhatsApp, Email, "what to preserve" checkboxes, "physical/digital" choice, message, submit) styled to match the brand. Because this page is pasted in as custom HTML rather than built with GHL's native drag-and-drop form element, here are your two options for capturing responses:
+The form section now embeds your native GoHighLevel form ("Archive", form ID `Mwyky2luVJnh3c9UUVtf`) directly via GHL's own iframe embed + `form_embed.js` script, inside the `.ghl-form-embed` wrapper in the `<section class="form-section" id="form">` block. Every submission is handled entirely by GoHighLevel — it creates/updates a Contact automatically, and you'll see it under **Contacts** in your GHL sub-account, plus under **Sites → Forms → Archive → Submissions**. Nothing on this page needs any further wiring for leads to land in your CRM.
 
-**Recommended — capture straight into your GHL CRM:**
-1. In GoHighLevel, go to **Sites → Forms** and build a new form with the same fields, in the same order, as the ones in this page's form (see the field list above).
-2. Open that form's **Integrate** tab and copy its embed code (iframe or JS embed).
-3. In `custom-block.html`, find the `<section class="form-section" id="form">` block and replace the `<form id="legacyArchiveForm">…</form>` contents with the GHL embed snippet, keeping the surrounding `.form-shell` wrapper so it stays visually consistent with the rest of the page.
-
-**Works immediately, no setup required:**
-The form as built already works out of the box. On submit, it opens a pre-filled email to **info@mapelfirm.com** containing everything the visitor entered, so no enquiry is lost while you set up the GHL-native form above.
-
-If you'd rather point it at a webhook (Zapier, Make, a GHL workflow webhook, etc.) instead of email, open the `<script>` block at the bottom of `custom-block.html` (or `script.js` in the preview build) and set the `FORM_ENDPOINT` constant near the top to that webhook URL — the form will `POST` a JSON payload there instead of opening email.
+The iframe has a fallback `min-height` (1326px desktop / 1500px on small mobile, matching the form's own reported height) so the page doesn't jump before GHL's script resizes it — adjust those two `.ghl-form-embed iframe` rules in `styles.css` if your form's real height changes.
 
 ## What's on the page
 
