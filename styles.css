@@ -744,40 +744,6 @@ h2.title em { font-style: italic; font-weight: 300; }
 
 .pricing-cta { margin-top: auto; align-self: flex-start; }
 
-.institutional-banner {
-  padding: clamp(2.25rem, 5vw, 3.5rem) clamp(1.5rem, 4vw, 4rem);
-  background: var(--ink);
-  color: var(--paper);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: clamp(1.5rem, 3vw, 3rem);
-  flex-wrap: wrap;
-}
-
-.institutional-banner .label {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: rgba(251,250,246,0.55);
-  margin-bottom: 0.75rem;
-  display: block;
-}
-
-.institutional-banner p.text {
-  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
-  font-weight: 300;
-  line-height: 1.5;
-  max-width: 640px;
-  flex: 1 1 340px;
-}
-
-.institutional-banner p.text strong {
-  font-weight: 500;
-  font-style: italic;
-}
-
 /* ── FINAL CTA ── */
 .final-cta {
   background: var(--ink);
@@ -1094,7 +1060,6 @@ footer {
   .process-grid { gap: 3rem; }
   .preserve-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
   .pricing-grid { gap: 1.5rem; }
-  .institutional-banner { gap: 2rem; }
 }
 
 /* Tablet portrait */
@@ -1123,13 +1088,6 @@ footer {
 
   .preserve-grid { grid-template-columns: 1fr 1fr; gap: 0.85rem; }
   .check-grid { grid-template-columns: 1fr; }
-
-  .institutional-banner {
-    flex-direction: column;
-    text-align: center;
-    padding: 2.5rem 1.5rem;
-    gap: 1.5rem;
-  }
 
   .footer-inner { flex-direction: column; text-align: center; }
 }
