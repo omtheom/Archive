@@ -17,6 +17,8 @@
   --line: #D4CFBF;
   --muted: #6B6459;
   --accent: #8A6F2E;
+  --btn: #CF0000;
+  --btn-hover: #A30000;
 
   /* Fluid spacing tokens */
   --pad-x: clamp(1.25rem, 4vw, 3rem);
@@ -120,7 +122,7 @@ nav {
   font-weight: 500;
   letter-spacing: 0.18em;
   color: var(--paper);
-  background: var(--ink);
+  background: var(--btn);
   padding: 0.78rem 1.8rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -128,7 +130,7 @@ nav {
   white-space: nowrap;
 }
 
-.nav-cta:hover { background: var(--ink-soft); }
+.nav-cta:hover { background: var(--btn-hover); }
 
 /* ── HAMBURGER ── */
 .nav-toggle {
@@ -200,7 +202,7 @@ nav {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.9rem 2.2rem;
-  background: var(--ink);
+  background: var(--btn);
   color: var(--paper);
   font-size: 1rem;
 }
@@ -298,18 +300,18 @@ nav {
   font-size: clamp(0.9rem, 1.15vw, 1rem);
   font-weight: 500;
   letter-spacing: 0.18em;
-  color: var(--ink);
-  background: var(--paper);
+  color: var(--paper);
+  background: var(--btn);
   padding: 1.1rem 2.6rem;
   text-decoration: none;
   text-transform: uppercase;
   transition: background 0.3s ease, transform 0.3s ease;
   display: inline-block;
-  border: 1px solid var(--paper);
+  border: 1px solid var(--btn);
   cursor: pointer;
 }
 
-.btn-primary:hover { background: var(--stone); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--btn-hover); transform: translateY(-1px); }
 
 /* Larger variant used inside the final-cta — adds presence at the page close. */
 .btn-primary.cta-final-btn {
@@ -325,18 +327,18 @@ nav {
   font-weight: 500;
   letter-spacing: 0.18em;
   color: var(--paper);
-  background: var(--ink);
+  background: var(--btn);
   padding: 1.05rem 2.4rem;
   text-decoration: none;
   text-transform: uppercase;
   transition: background 0.3s ease, transform 0.3s ease;
   display: inline-block;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--btn);
   cursor: pointer;
   text-align: center;
 }
 
-.btn-dark:hover { background: var(--ink-soft); transform: translateY(-1px); }
+.btn-dark:hover { background: var(--btn-hover); transform: translateY(-1px); }
 
 .btn-dark.btn-block { width: 100%; }
 
@@ -1051,12 +1053,10 @@ footer {
 /* Touch devices — remove :hover dependencies that cause sticky states */
 @media (hover: none) {
   .nav-links a:hover,
-  .btn-primary:hover,
   .btn-secondary:hover,
   .btn-tertiary:hover,
-  .nav-cta:hover,
   .footer-links a:hover { opacity: 1; border-color: rgba(251,250,246,0.4); background: var(--paper); color: inherit; }
-  .nav-cta:hover { background: var(--ink); color: var(--paper); }
-  .btn-primary:hover { background: var(--paper); }
-  .btn-dark:hover { background: var(--ink); }
+  .nav-cta:hover,
+  .btn-primary:hover,
+  .btn-dark:hover { background: var(--btn); color: var(--paper); transform: none; }
 }
