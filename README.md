@@ -47,7 +47,7 @@ Until you add real photos, every slot falls back to a warm stone-colored panel (
 
 The form section embeds a native GoHighLevel **Survey** (widget ID `L0TPc5Fvjp618wBoLFCT`) via GHL's iframe embed + `form_embed.js` script, inside the `.ghl-form-embed` wrapper in the `<section class="form-section" id="form">` block. GHL's Surveys show one question at a time with Next/Back navigation instead of a long list of fields all at once — that's why this replaced the earlier "Archive" Form embed. Every submission is still handled entirely by GoHighLevel — it creates/updates a Contact automatically, and you'll see it under **Contacts** in your GHL sub-account, plus under **Sites → Surveys → [this survey] → Submissions**. Nothing on this page needs any further wiring for leads to land in your CRM.
 
-The iframe has a fallback `min-height` (520px desktop / 620px on small mobile — a single question is much shorter than the old full-length form) so the page doesn't jump before GHL's script resizes it. If a question wraps onto more lines than that on your actual content, adjust the two `.ghl-form-embed iframe` rules in `styles.css`.
+The iframe has a fallback `min-height` (260px desktop / 320px on small mobile — just enough to avoid a blank flash before GHL's script sets the real height) so the page doesn't jump on load. GHL's `form_embed.js` resizes the iframe to fit each question automatically, so this floor should rarely matter in practice — if a particular question (e.g. one with many checkbox options) ever looks clipped, or you see empty space below the card again, adjust the two `.ghl-form-embed iframe` rules in `styles.css`.
 
 ## The thank-you page
 
