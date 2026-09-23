@@ -59,12 +59,12 @@ The logo and "Return to Homepage" link both point to `/` — if your published l
 
 1. Hero — "Give Your Family History a Home In the Arctic for the Next 1,000 Years."
 2. Tagline strip — "Keeping families in conversation, for generations."
-3. What We Preserve — 6 categories, each with a photo slot (Family Photographs, Letters & Documents, Books & Manuscripts, Film & Video, Audio, Business History).
-4. How It Works — the 6-step process.
-5. Preserved for Generations — the archival-technology reassurance section + "what your archive receives" checklist.
-6. A centered narrative section — "What should your family preserve?"
-7. Pricing — "Pay once, preserve for 1,000 years." **Family Archive** and **Institutional Archive** (for businesses & organisations) as two cards side by side.
-8. Closing CTA — "Preserve what should outlive you."
-9. The form.
+3. The form.
+4. What We Preserve — 6 categories, each with a photo slot (Family Photographs, Letters & Documents, Books & Manuscripts, Film & Video, Audio, Business History).
+5. How It Works — the 6-step process.
+6. Preserved for Generations — the archival-technology reassurance section + "what your archive receives" checklist.
+7. A centered narrative section — "What should your family preserve?"
+8. Pricing — "Pay once, preserve for 1,000 years." **Family Archive** and **Institutional Archive** (for businesses & organisations) as two cards side by side.
+9. Closing CTA — "Preserve what should outlive you."
 10. FAQ — full accordion built from your copy, with "Why should I preserve these things now?" opened by default at the top (your note flagged it as the key question for ad traffic).
 11. Footer — matches mapelfirm.com (same email, Instagram, Facebook, LinkedIn).
