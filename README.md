@@ -45,9 +45,9 @@ Until you add real photos, every slot falls back to a warm stone-colored panel (
 
 ## The form — how it captures responses
 
-The form section now embeds your native GoHighLevel form ("Archive", form ID `Mwyky2luVJnh3c9UUVtf`) directly via GHL's own iframe embed + `form_embed.js` script, inside the `.ghl-form-embed` wrapper in the `<section class="form-section" id="form">` block. Every submission is handled entirely by GoHighLevel — it creates/updates a Contact automatically, and you'll see it under **Contacts** in your GHL sub-account, plus under **Sites → Forms → Archive → Submissions**. Nothing on this page needs any further wiring for leads to land in your CRM.
+The form section embeds a native GoHighLevel **Survey** (widget ID `L0TPc5Fvjp618wBoLFCT`) via GHL's iframe embed + `form_embed.js` script, inside the `.ghl-form-embed` wrapper in the `<section class="form-section" id="form">` block. GHL's Surveys show one question at a time with Next/Back navigation instead of a long list of fields all at once — that's why this replaced the earlier "Archive" Form embed. Every submission is still handled entirely by GoHighLevel — it creates/updates a Contact automatically, and you'll see it under **Contacts** in your GHL sub-account, plus under **Sites → Surveys → [this survey] → Submissions**. Nothing on this page needs any further wiring for leads to land in your CRM.
 
-The iframe has a fallback `min-height` (1326px desktop / 1500px on small mobile, matching the form's own reported height) so the page doesn't jump before GHL's script resizes it — adjust those two `.ghl-form-embed iframe` rules in `styles.css` if your form's real height changes.
+The iframe has a fallback `min-height` (520px desktop / 620px on small mobile — a single question is much shorter than the old full-length form) so the page doesn't jump before GHL's script resizes it. If a question wraps onto more lines than that on your actual content, adjust the two `.ghl-form-embed iframe` rules in `styles.css`.
 
 ## The thank-you page
 
