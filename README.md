@@ -2,21 +2,25 @@
 
 Built in the same visual system as mapelfirm.com / Legacy Codex (Cormorant Garamond serif, ink/paper/stone palette, same nav, buttons, section rhythm and footer).
 
-Three files, one page:
+Two pages share one stylesheet:
 
 | File | What it is | Where it goes in GoHighLevel |
 |------|------------|------------------------------|
-| `styles.css` | All stylesheet rules + responsive breakpoints | **Site Settings → Custom CSS** (or Page → Custom CSS). Paste the whole file. |
-| `custom-block.html` | HTML markup + inline JS for the page | A **Custom Code / Custom HTML** element on the page. Paste the whole file. |
-| `index.html` + `script.js` | Standalone reference build (links to `styles.css` / `script.js`). Open `index.html` locally to preview. | Not used in GHL — preview only. |
+| `styles.css` | All stylesheet rules + responsive breakpoints for **both** pages | **Site Settings → Custom CSS** (site-wide, applies to every page). Paste the whole file once. |
+| `custom-block.html` | HTML markup + inline JS for the main landing page | A **Custom Code / Custom HTML** element on the landing page. Paste the whole file. |
+| `thank-you-block.html` | HTML markup for the thank-you page (no JS needed) | A **Custom Code / Custom HTML** element on a **new, separate page** (e.g. `/thank-you`). Paste the whole file. |
+| `index.html` + `script.js` | Standalone reference build of the landing page (links to `styles.css` / `script.js`). Open locally to preview. | Not used in GHL — preview only. |
+| `thank-you.html` | Standalone reference build of the thank-you page. Open locally to preview. | Not used in GHL — preview only. |
 
 ## Paste order in GoHighLevel
 
-1. Open the page in the GoHighLevel builder.
-2. Go to the page's **Custom CSS** field and paste the full contents of `styles.css`.
-3. Add a **Custom Code / HTML** block at the top of the page and paste the full contents of `custom-block.html`.
-4. Replace the placeholders below with real assets/links.
-5. Publish and preview — including on mobile.
+1. Open the landing page in the GoHighLevel builder.
+2. Go to **Site Settings → Custom CSS** and paste the full contents of `styles.css` — this one paste covers both pages, since GHL's Custom CSS is site-wide.
+3. Add a **Custom Code / HTML** block at the top of the landing page and paste the full contents of `custom-block.html`.
+4. Create a **new page** in GHL (e.g. named "Thank You", URL `/thank-you`). Add a **Custom Code / HTML** block and paste the full contents of `thank-you-block.html`. Do **not** paste `styles.css` again — it's already loaded site-wide from step 2.
+5. Set the "Archive" form (Sites → Forms → Archive → **Settings** tab) to **redirect to a URL** on submit, pointing at your new thank-you page's live URL (e.g. `https://yourdomain.com/thank-you`). This is what actually sends people to the new page after they submit — I can't set this from here since it's a setting inside your GHL account.
+6. Replace the placeholders below with real assets/links.
+7. Publish and preview both pages — including on mobile.
 
 ## Placeholders to replace
 
@@ -44,6 +48,12 @@ Until you add real photos, every slot falls back to a warm stone-colored panel (
 The form section now embeds your native GoHighLevel form ("Archive", form ID `Mwyky2luVJnh3c9UUVtf`) directly via GHL's own iframe embed + `form_embed.js` script, inside the `.ghl-form-embed` wrapper in the `<section class="form-section" id="form">` block. Every submission is handled entirely by GoHighLevel — it creates/updates a Contact automatically, and you'll see it under **Contacts** in your GHL sub-account, plus under **Sites → Forms → Archive → Submissions**. Nothing on this page needs any further wiring for leads to land in your CRM.
 
 The iframe has a fallback `min-height` (1326px desktop / 1500px on small mobile, matching the form's own reported height) so the page doesn't jump before GHL's script resizes it — adjust those two `.ghl-form-embed iframe` rules in `styles.css` if your form's real height changes.
+
+## The thank-you page
+
+A simple confirmation page at `/thank-you` (or whatever path you give it): logo, a congratulatory headline ("Your family's history is already in good hands."), a short thank-you message, a two-step "what happens next" list (**check your email** / **expect our call**), a "Return to Homepage" button, and the same footer as the main page.
+
+The logo and "Return to Homepage" link both point to `/` — if your published landing page lives at a different path, update the two `href="/"` occurrences near the top and bottom of `thank-you-block.html` to match.
 
 ## What's on the page
 
